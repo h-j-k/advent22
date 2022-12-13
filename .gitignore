@@ -2,3 +2,5 @@
 */compiled/
 *.bak
 day*.txt
+.gradle
+build
