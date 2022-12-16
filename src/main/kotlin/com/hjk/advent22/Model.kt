@@ -1,6 +1,10 @@
 package com.hjk.advent22
 
-data class Point2d(val x: Int, val y: Int)
+import kotlin.math.abs
+
+data class Point2d(val x: Int, val y: Int) {
+    operator fun minus(other: Point2d) = abs(this.x - other.x) + abs(this.y - other.y)
+}
 
 fun List<String>.pointIndices() = indices.flatMap { y -> this[0].indices.map { x -> Point2d(x = x, y = y) } }
 
